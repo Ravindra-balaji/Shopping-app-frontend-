@@ -4,7 +4,7 @@ const ProfilePage = () => {
   const [products, setProducts] = useState([]);
   const getData = async () => {
     try {
-      const resp = await fetch("http://localhost:2000/api/v1/products", {
+      const resp = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products`, {
         method: "GET",
       });
       const result = await resp.json();
